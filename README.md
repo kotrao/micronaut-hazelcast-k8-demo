@@ -1,18 +1,13 @@
-## Micronaut 2.5.13 Documentation
+## Run in regular mode
+- cd ./test-regular
+- ./run-port-8080.sh
+- ./run-port-8081.sh
 
-- [User Guide](https://docs.micronaut.io/2.5.13/guide/index.html)
-- [API Reference](https://docs.micronaut.io/2.5.13/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/2.5.13/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+These commands will run two instances of the service on ports 8080 and 8081. Now run ./test.sh 
 
-## Feature http-client documentation
+## Run in minikube
 
-- [Micronaut HTTP Client documentation](https://docs.micronaut.io/latest/guide/index.html#httpClient)
+I am using skaffold to run it. So, please follow the stpes from the root of project:
 
-## Feature cache-hazelcast documentation
-
-- [Micronaut Hazelcast Cache documentation](https://micronaut-projects.github.io/micronaut-cache/latest/guide/index.html#hazelcast)
-
-- [https://hazelcast.org/](https://hazelcast.org/)
-
+- Make sure skaffold is installed
+- Then run the command : skaffold dev
