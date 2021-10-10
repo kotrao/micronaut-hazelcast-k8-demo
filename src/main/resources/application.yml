@@ -1,0 +1,11 @@
+micronaut:
+  application:
+    name: demo
+#hazelcast.network.addresses: '[''121.0.0.1:5701'']'
+#hazelcast:
+#  network:
+#    join:
+#      kubernetes:
+#        enabled: true
+#        namespace: apptordev
+#        service-name: cachedemo-hzlecast-svc

@@ -1,0 +1,1 @@
+java -jar ../build/libs/micronaut-hazelcast-k8-demo-0.1-all.jar 8080
