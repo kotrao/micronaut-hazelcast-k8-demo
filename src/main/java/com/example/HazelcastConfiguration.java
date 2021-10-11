@@ -11,6 +11,8 @@ public class HazelcastConfiguration {
 
     @Requires(env="local")
     public Config hazelcastConfig() {
+
+        System.out.println("****hazelcastConfig: local");
         Config configuration = new Config()
                 .setClusterName("micronaut-cluster");
         JoinConfig joinConfig = configuration.getNetworkConfig().getJoin();
@@ -21,6 +23,8 @@ public class HazelcastConfiguration {
     @Bean
     @Requires(env="localk8")
     public Config hazelcastConfigLocalK8() {
+        System.out.println("****hazelcastConfig: localk8");
+
         Config configuration = new Config();
 //                .setClusterName("apptor-hazelnet-cluster");
 
@@ -28,8 +32,8 @@ public class HazelcastConfiguration {
         joinConfig.getTcpIpConfig().setEnabled(false);
         joinConfig.getMulticastConfig().setEnabled(false);
         joinConfig.getKubernetesConfig().setEnabled(true)
-                .setProperty("namespace", "apptordev")
-                .setProperty("service-name", "cachedemo-hzlecast-svc");
+                .setProperty("namespace", "default")
+                .setProperty("service-name", "hazelcast-service");
                 //.setProperty("resolve-not-ready-addresses", "true");
 
         return configuration;

@@ -22,7 +22,10 @@ public class CommandController {
 
     @Get("/get")
     public CommandResponse get(@QueryValue("key") String key) {
-        String value = commandService.get(key);
+
+        System.out.println("*****GET - process id:" + ProcessHandle.current().pid());
+
+        String value = commandService.get(key) + " - Process id" +ProcessHandle.current().pid();
         return new CommandResponse(value);
     }
 

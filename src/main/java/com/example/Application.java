@@ -24,6 +24,11 @@ public class Application {
             System.out.println("No port received!");
         }
         System.out.println("Port: " + port);
-        Micronaut.run(Application.class, "-Dmicronaut.server.port=" + port);
+        //Micronaut.run(Application.class, "-Dmicronaut.server.port=" + port);
+
+        Micronaut.build("-Dmicronaut.server.port=" + port)
+                .mainClass(Application.class)
+                .defaultEnvironments("local")
+                .start();
     }
 }

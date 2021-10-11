@@ -10,7 +10,7 @@ build:
 deploy:
   kubectl:
     manifests:
-    - k8s/deployment-default.yaml
+    - k8s/deployment-default.yml
 
 portForward:
   - resourceType: service
