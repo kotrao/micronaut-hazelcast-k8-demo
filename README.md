@@ -9,5 +9,5 @@ These commands will run two instances of the service on ports 8080 and 8081. Now
 
 I am using skaffold to run it. So, please follow the stpes from the root of project:
 
-- Make sure skaffold is installed
+- Make sure skaffold is installed (<a href="https://skaffold.dev/docs/install/">skaffold installation help</a>)
 - Then run the command : skaffold dev
